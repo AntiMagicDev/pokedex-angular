@@ -11,4 +11,21 @@ import { PokedexWeakness } from '../pokedex-weakness/pokedex-weakness';
   templateUrl: './pokedex-main.html',
   styleUrl: './pokedex-main.css',
 })
-export class PokedexMain {}
+export class PokedexMain {
+  data: Pokemon[] = [
+    {
+      id: 1,
+      name: 'Bulbasaur',
+      height: 1,
+      weight: 1,
+    },
+    {
+      id: 2,
+      name: 'Ivysaur',
+    },
+    {
+      id: 3,
+      name: 'Venusaur',
+    },
+  ];
+}
