@@ -1,4 +1,27 @@
 <div
   class="h-60 bg-gray-800 border-6 border-white rounded-md shadow-sm shadow-black grid gap-2 p-2 overflow-auto justify-center"
   style="grid-template-columns: repeat(auto-fill, 64px)"
-></div>
+  (scroll)="onScroll($event)"
+>
+  @if (data()) {
+    @for (item of data()!.results; track item.name) {
+      <img
+        class="w-16 h-16 object-contain cursor-pointer"
+        (click)="selectPokemon(item)"
+        [alt]="item.name"
+        [src]="
+          'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' +
+          item.id +
+          '.png'
+        "
+        [ngClass]="{
+          'border border-dashed border-white rounded-md bg-gray-600': selected()?.id === item.id,
+        }"
+      />
+    } @empty {
+      <p class="font-ds-digi text-xl text-white uppercase">No data.</p>
+    }
+  } @else {
+    <p class="font-ds-digi text-xl text-white uppercase">Loading...</p>
+  }
+</div>

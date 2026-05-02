@@ -16,13 +16,18 @@
     "module": "preserve",
     "paths": {
       "@data/*": ["./src/data/*"],
-      "@pipes/*": ["./src/pipes/*"]
+      "@pipes/*": ["./src/pipes/*"],
+      "@environments/*": ["./src/environments/*"],
+      "@services/*": ["./src/services/*"],
+      "@interceptors/*": ["./src/interceptors/*"],
+      "@directives/*": ["./src/directives/*"]
     }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
+    "typeCheckHostBindings": true,
     "strictTemplates": true
   },
   "files": [],
