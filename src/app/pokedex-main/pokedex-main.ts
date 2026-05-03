@@ -1,4 +1,5 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformServer } from '@angular/common';
 import { PokedexScreen } from '../pokedex-screen/pokedex-screen';
 import { PokedexControl } from '../pokedex-control/pokedex-control';
 import { PokedexEvolution } from '../pokedex-evolution/pokedex-evolution';
@@ -24,10 +25,13 @@ import { PokedexSelected } from '../pokedex-selected/pokedex-selected';
 })
 export class PokedexMain {
   private readonly _pokedexService = inject(PokedexService);
+  private readonly _platformId = inject(PLATFORM_ID);
 
   data = this._pokedexService.data;
 
   constructor() {
-    this._pokedexService.getPokemonList(50, 0);
+    if (!isPlatformServer(this._platformId)) {
+      this._pokedexService.getPokemonList(50, 0);
+    }
   }
 }
