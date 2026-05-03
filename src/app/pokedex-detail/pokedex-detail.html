@@ -37,7 +37,9 @@
 </div>
 
 <ng-template #detailTemplate let-data>
-  <div class="bg-blue-400 rounded-md p-2 flex flex-col shadow-sm shadow-black">
+  <div
+    class="bg-gradient-to-br from-blue-400 to-blue-600 rounded-md p-2 flex flex-col shadow-sm shadow-black"
+  >
     <span class="text-lg text-gray-800 uppercase">{{ data.title }}</span>
     <span class="text-xl font-bold uppercase truncate">{{ data.value }}</span>
   </div>

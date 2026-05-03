@@ -6,6 +6,7 @@ import { PokedexDetail } from '../pokedex-detail/pokedex-detail';
 import { PokedexDamage } from '../pokedex-damage/pokedex-damage';
 import { PokedexService } from '../../services/pokedex.service';
 import { PokedexStat } from '../pokedex-stat/pokedex-stat';
+import { PokedexSelected } from '../pokedex-selected/pokedex-selected';
 
 @Component({
   selector: 'app-pokedex-main',
@@ -18,6 +19,7 @@ import { PokedexStat } from '../pokedex-stat/pokedex-stat';
     PokedexDetail,
     PokedexDamage,
     PokedexStat,
+    PokedexSelected,
   ],
 })
 export class PokedexMain {

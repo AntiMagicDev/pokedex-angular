@@ -1,5 +1,5 @@
 <div
-  class="h-60 bg-gray-800 border-6 border-white rounded-md shadow-sm shadow-black grid gap-2 p-2 overflow-auto justify-center"
+  class="h-60 bg-blue-900 border-6 border-blue-300 rounded-lg shadow-sm shadow-black grid gap-2 p-2 overflow-auto justify-center"
   style="grid-template-columns: repeat(auto-fill, 64px)"
   (scroll)="onScroll($event)"
 >
@@ -15,7 +15,8 @@
           '.png'
         "
         [ngClass]="{
-          'border border-dashed border-white rounded-md bg-gray-600': selected()?.id === item.id,
+          'border border-dashed border-green-200 rounded-md bg-blue-700':
+            selected()?.id === item.id,
         }"
       />
     } @empty {

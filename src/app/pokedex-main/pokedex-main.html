@@ -1,31 +1,33 @@
 <div class="flex justify-center items-center p-4">
   <div
-    class="flex flex-col md:flex-row bg-red-600 rounded-lg shadow-xl border-4 border-red-800 w-full max-w-5xl"
+    class="flex flex-col md:flex-row bg-gradient-to-br from-blue-500 to-blue-800 rounded-2xl shadow-2xl border-8 border-blue-900 w-full max-w-5xl"
   >
     <!-- Izquierda -->
     <div
-      class="md:w-1/2 w-full p-4 flex flex-col gap-4 border-b-4 md:border-b-0 md:border-r-4 border-red-800"
+      class="md:w-1/2 w-full p-4 flex flex-col gap-4 border-b-8 md:border-b-0 md:border-r-8 border-blue-900"
     >
       <!-- Cámara + luces -->
       <div class="flex items-center gap-3">
         <div
-          class="w-12 h-12 bg-blue-400 rounded-full border-4 border-white shadow-md shadow-black"
+          class="w-12 h-12 bg-red-400 rounded-full border-4 border-white shadow-md shadow-black"
         ></div>
         <div class="flex gap-2">
           <div
-            class="w-4 h-4 bg-red-500 rounded-full border border-black shadow-sm shadow-black"
+            class="w-4 h-4 bg-pink-500 rounded-full border border-black shadow-sm shadow-black"
           ></div>
           <div
-            class="w-4 h-4 bg-yellow-400 rounded-full border border-black shadow-sm shadow-black"
+            class="w-4 h-4 bg-orange-400 rounded-full border border-black shadow-sm shadow-black"
           ></div>
           <div
-            class="w-4 h-4 bg-green-500 rounded-full border border-black shadow-sm shadow-black"
+            class="w-4 h-4 bg-lime-500 rounded-full border border-black shadow-sm shadow-black"
           ></div>
         </div>
       </div>
 
       <!-- Pantalla -->
       <app-pokedex-screen></app-pokedex-screen>
+      <!-- Seleccionado -->
+      <app-pokedex-selected></app-pokedex-selected>
 
       <!-- Controles -->
       <app-pokedex-control></app-pokedex-control>

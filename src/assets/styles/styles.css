@@ -132,3 +132,12 @@
   background-color: #68a090;
   color: white;
 }
+
+body {
+  background-image: url('https://get.wallhere.com/photo/sunlight-pixel-art-grass-sky-field-clouds-retro-games-pixels-horizon-8-bit-cloud-grassland-pasture-meadow-plain-prairie-natural-environment-computer-wallpaper-ecosystem-145084.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
